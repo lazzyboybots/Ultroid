@@ -27,14 +27,14 @@ class Var:
         if len(sys.argv) > 2
         else config("API_HASH", default="eb06d4abfb49dc3eeb1aeb98ae0f581e")
     )
-    SESSION = sys.argv[3] if len(sys.argv) > 3 else config("SESSION", default=None)
+    SESSION = sys.argv[3] if len(sys.argv) > 3 else config("SESSION", default="1BVtsOKoBu34YnuwNhiEqkgqci8mQN61fzUUA_9kp8nNjKx8YJo_oPKOSLkpse-0ICGt1E6q6qvYqVIUauLniV0zyzLY2A84PfllNhf9XVRn0aFCSk4oeeGvnufF8c39i-DzFng4K9n9PnzUQcVQnaklkaix4juR4vCsK44h4RG4P7zP_vmV0OumnM4igQewbGNrhgpYfCJ7d-IZan62zUtC2xuiejUiw_MGMpV5cAOPBMG5dVRVyYWnp6c40cwmQEqwYXxTZ2ryZL_CqTMlyD3UMgihJNnTQvCFzvezp1evCAaWMWGuDJI_Jx181bb6XtOY3xq4HcV-f1aDmmffwy_A9s7pFqUI=")
     REDIS_URI = (
         sys.argv[4]
         if len(sys.argv) > 4
-        else (config("REDIS_URI", default=None) or config("REDIS_URL", default=None))
+        else (config("REDIS_URI", default="redis-14150.c212.ap-south-1-1.ec2.redns.redis-cloud.com:14150") or config("REDIS_URL", default="redis-14150.c212.ap-south-1-1.ec2.redns.redis-cloud.com:14150"))
     )
     REDIS_PASSWORD = (
-        sys.argv[5] if len(sys.argv) > 5 else config("REDIS_PASSWORD", default=None)
+        sys.argv[5] if len(sys.argv) > 5 else config("REDIS_PASSWORD", default="A4suUtAErSR27jTL0hxaDR9qHmwPMFKI")
     )
     # extras
     BOT_TOKEN = config("BOT_TOKEN", default=None)
